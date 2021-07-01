@@ -1,0 +1,21 @@
+.Button input{
+    -webkit-appearance: none;
+    background-color: #36a2c1;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: -0.18px;
+    font-weight: 300;
+    padding: 10px 26px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Button{
+    margin: 40px 0 20px 0;
+}
+@media (max-width: 450px) {
+    .Button input{
+        width: 100%;
+    }
+}

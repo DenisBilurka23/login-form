@@ -1,0 +1,14 @@
+.Title{
+    margin-bottom: 30px;
+}
+.Title > span:first-child{
+    font-size: 41px;
+    font-weight: 700;
+    color: #2fa2c3;
+    margin-right: 6px;
+}
+.Title > span:last-child{
+     font-size: 18px;
+     font-weight: 300;
+     color: #666666;
+}
