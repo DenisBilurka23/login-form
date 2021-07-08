@@ -1,0 +1,36 @@
+form {
+    border: 1px solid rgba(153, 153, 153, 0.33);
+    width: 440px;
+    max-width: 90%;
+    border-radius: 5.51px;
+}
+.container{
+    width: 294px;
+    margin: 0 auto;
+}
+.links{
+    margin-bottom: 34px;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.12px;
+}
+.links span {
+    color: #666666;
+}
+.links a {
+    color: #36a2c1;
+    text-decoration: none;
+}
+.error{
+    color: #ed1f24;
+    margin-top: 15px;
+    font-size: 15px;
+}
+.profileCreate{
+    color: green;
+    margin-top: 15px;
+    font-size: 15px;
+}
+.profileCreate span{
+    display: block;
+}

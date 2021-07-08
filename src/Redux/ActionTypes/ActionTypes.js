@@ -1,0 +1,5 @@
+export const AUTH_SUCCESS = 'AUTH_SUCCESS'
+export const LOGOUT = 'LOGOUT'
+export const LOAD_ERROR = 'LOAD_ERROR'
+export const PROFILE_CREATE = 'PROFILE_CREATE'
+export const CLEAR_ERROR = 'CLEAR_ERROR'

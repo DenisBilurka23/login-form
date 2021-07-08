@@ -7,26 +7,3 @@ body {
     align-items: center;
     flex-direction: column;
 }
-form {
-    border: 1px solid rgba(153, 153, 153, 0.33);
-    width: 440px;
-    max-width: 90%;
-    border-radius: 5.51px;
-}
-.container{
-    width: 294px;
-    margin: 0 auto;
-}
-.reset{
-    margin-bottom: 34px;
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: -0.12px;
-}
-.reset span {
-    color: #666666;
-}
-.reset a {
-    color: #36a2c1;
-    text-decoration: none;
-}
