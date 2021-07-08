@@ -9,6 +9,7 @@ import {AutoLoginTC} from "./Redux/Thunk/Thunk";
 const App = ({authorized, AutoLoginTC}) => {
     useEffect(() => {
         AutoLoginTC()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
         <div>
