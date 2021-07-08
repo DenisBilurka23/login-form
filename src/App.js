@@ -14,9 +14,8 @@ const App = ({authorized, AutoLoginTC}) => {
     return (
         <div>
             <Switch>
-                <Route path='/login-form' render={() => <Redirect to='authorization/sign-in'/>}/>
-                <Route path='/authorization' component={Login}/>
-                {authorized && <Route path='/' component={Main}/>}
+                {authorized && <Route path='/home' component={Main}/>}
+                <Route path='/' component={Login}/>
             </Switch>
         </div>
 

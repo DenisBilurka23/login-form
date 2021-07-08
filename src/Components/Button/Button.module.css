@@ -11,6 +11,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.Button input:disabled{
+    opacity: .5;
+    cursor: default;
+}
 .Button{
     margin: 40px 0 20px 0;
 }

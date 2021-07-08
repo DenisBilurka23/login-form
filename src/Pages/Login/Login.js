@@ -4,7 +4,7 @@ import {Route, Switch, useHistory} from "react-router-dom";
 import {connect} from "react-redux";
 import {AuthTC} from '../../Redux/Thunk/Thunk'
 
-const Login = ({AuthTC, error, profileCreated}) => {
+const Login = ({AuthTC, error, profileCreated, isLoading}) => {
     const history = useHistory()
     const signInHandler = async (values, form) => {
         AuthTC(values.email, values.password, true, history, form)
@@ -16,16 +16,17 @@ const Login = ({AuthTC, error, profileCreated}) => {
         <div className="App">
             <Title/>
             <Switch>
-                <Route path='/authorization/sign-in'
-                       render={() => <FormCustom profileCreated={profileCreated} error={error} name='Login' login={true} onSubmitHandler={signInHandler}/>}/>
-                <Route path='/authorization/sign-up'
-                       render={() => <FormCustom error={error} name='Sign Up' login={false} onSubmitHandler={signUpHandler}/>}/>
+                <Route path='/'
+                      exact render={() => <FormCustom isLoading={isLoading} profileCreated={profileCreated} error={error} name='Login' login={true} onSubmitHandler={signInHandler}/>}/>
+                <Route path='/sign-up'
+                       render={() => <FormCustom isLoading={isLoading} error={error} name='Sign Up' login={false} onSubmitHandler={signUpHandler}/>}/>
             </Switch>
         </div>
     )
 }
 const mapStateToProps = state => ({
     error: state.AuthReducer.error,
-    profileCreated: state.AuthReducer.profileCreationSuccess
+    profileCreated: state.AuthReducer.profileCreationSuccess,
+    isLoading: state.AuthReducer.isLoading
 })
 export default connect(mapStateToProps, {AuthTC})(Login)

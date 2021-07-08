@@ -8,7 +8,7 @@ const Main = ({Logout}) => {
     const history = useHistory()
     const logoutHandler = () => {
         Logout()
-        history.push('/authorization/sign-in')
+        history.push('/')
     }
     return (
         <div className={classes.Main}>

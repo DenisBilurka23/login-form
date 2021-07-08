@@ -5,7 +5,7 @@ import {useState} from "react";
 import Input from "../Input/Input";
 import {NavLink} from "react-router-dom";
 
-const FormCustom = ({onSubmitHandler, color, name, login, error, profileCreated}) => {
+const FormCustom = ({onSubmitHandler, color, name, login, error, profileCreated, isLoading}) => {
     const [fields] = useState([
         {name: 'email', type: 'E-mail'},
         {name: 'password', type: 'Password'}
@@ -51,17 +51,17 @@ const FormCustom = ({onSubmitHandler, color, name, login, error, profileCreated}
                             <span>You can sign in now</span>
                         </div>}
                         <div className={classes.buttonSection}>
-                            <Button color={color} name={name}/>
+                            <Button disable={isLoading} color={color} name={name}/>
                         </div>
                         {
                             login ?
                                 <div className={classes.links}>
                                     <span>Dont have an account yet? </span>
-                                    <NavLink to="/authorization/sign-up">Register here</NavLink>
+                                    <NavLink to="/sign-up">Register here</NavLink>
                                 </div> :
                                 <div className={classes.links}>
                                     <span>Already have an account? </span>
-                                    <NavLink to="/authorization/sign-in">Login here</NavLink>
+                                    <NavLink to="/">Login here</NavLink>
                                 </div>
                         }
                     </div>

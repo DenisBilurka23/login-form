@@ -1,9 +1,17 @@
-import {AUTH_SUCCESS, CLEAR_ERROR, LOAD_ERROR, LOGOUT, PROFILE_CREATE} from "../ActionTypes/ActionTypes";
+import {
+    AUTH_SUCCESS,
+    CLEAR_ERROR,
+    DELETE_PROFILE_NOTIFICATION,
+    LOAD_ERROR,
+    LOGOUT,
+    PROFILE_CREATE, TOGGLE_BUTTON
+} from "../ActionTypes/ActionTypes";
 
 const initialState = {
     token: null,
     error: null,
-    profileCreationSuccess: false
+    profileCreationSuccess: false,
+    isLoading: false
 }
 
 const AuthReducer = (state = initialState, action) => {
@@ -36,6 +44,18 @@ const AuthReducer = (state = initialState, action) => {
             return {
                 ...state,
                 profileCreationSuccess: true
+            }
+        }
+        case DELETE_PROFILE_NOTIFICATION: {
+            return {
+                ...state,
+                profileCreationSuccess: false
+            }
+        }
+        case TOGGLE_BUTTON: {
+            return {
+                ...state,
+                isLoading: !state.isLoading
             }
         }
         default: {
